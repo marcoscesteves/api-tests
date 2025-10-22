@@ -1,38 +1,39 @@
-# 🧪 API de Testes com Spring Boot
+# 🧪 Spring Boot Test API
 
-Este repositório foi criado apenas para **testes e aprendizado do Spring Boot**, servindo como um espaço de prática pessoal para entender como funcionam APIs REST.
-
----
-
-## 🚀 Objetivo
-
-Aprender os conceitos básicos do **Spring Boot**:
-- Criar e executar uma API local
-- Definir endpoints com `@RestController`
-- Retornar texto e JSON
-- Entender estrutura do projeto e Maven
+This repository was created for **learning and practicing Spring Boot**, serving as a personal space to explore how REST APIs work.
 
 ---
 
-## 🏗️ Tecnologias utilizadas
+## 🚀 Goal
 
-- **Java 17**
-- **Spring Boot 3.x**
-- **Maven**
-- IDE: VSCode
+To learn the basic concepts of **Spring Boot**:
+- Create and run a local API  
+- Define endpoints with `@RestController`  
+- Return text and JSON responses  
+- Understand the project structure and Maven usage  
 
 ---
 
-## ▶️ Como executar o projeto
+## 🏗️ Technologies Used
 
-1. Clonar este repositório:
+- **Java 17**  
+- **Spring Boot 3.x**  
+- **Maven**  
+- **IDE:** VS Code  
+
+---
+
+## ▶️ How to Run the Project
+
+1. **Clone this repository:**
    ```bash
-   git clone https://github.com/seu-usuario/api-tests.git
-   cd api-test
+   git clone https://github.com/marcoscesteves/api-tests.git
+   cd api-tests
 
-2. Executar o servidor:
+2. **Run the server:**
+   ````bash
    mvn spring-boot:run
 
-3. Abrir o servidor no endereço:
+3. Open the application in your browser:
    http://localhost:8080/hello
 
