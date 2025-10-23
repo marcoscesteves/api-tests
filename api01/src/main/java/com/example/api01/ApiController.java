@@ -8,7 +8,7 @@ public class ApiController {
     
     @GetMapping("hello")
     public String hello() {
-        return "Olá! O seu primeiro teste construíndo uma API com Spring Boot está funcional! ";
+        return "Hello! I am your first API built using Spring Boot! ";
     } 
     
 }
