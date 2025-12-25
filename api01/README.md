@@ -1,4 +1,4 @@
-# 🧪 Spring Boot Test API
+# Spring Boot Test API - API01
 
 Este repositório foi criado para **aprender e praticar Spring Boot**, servindo como um espaço pessoal para explorar como funcionam as APIs REST.
 
@@ -48,5 +48,22 @@ Aprender os conceitos básicos de **Spring Boot**:
    Uma mensagem de confirmação será exibida confirmando que a API está funcional.  
    ![Janela do navegador exibindo localhost:8080/hello com a mensagem "Hello! I am your first API built using Spring Boot!" mostrada em texto preto sobre fundo branco](imagem2.jpg)
 
-4. ** Interrompa o serviço: **
-   Interrompa a execução do servidor e vá para o execício 02 (api_tests/api02)
+4. **O que aprendemos neste exercício:**
+
+    **i) @RestController**
+    - Marca a classe como um controlador REST
+    - Combina `@Controller` + `@ResponseBody`
+    - Todos os métodos retornam dados diretamente (não views HTML)
+
+    **ii) @GetMapping("hello")**
+    - Mapeia requisições HTTP GET para o caminho `/hello`
+    - Define qual método será executado quando acessarmos essa URL
+    - Parte do Spring MVC para criar endpoints REST
+
+    **iii) Retorno String**
+    - Método retorna uma String simples
+    - Spring automaticamente converte para resposta HTTP
+    - Texto puro é enviado ao navegador
+
+5. **Interrompa o serviço:**
+   Interrompa a execução do servidor e vá para o exercício 02 (api_tests/api02)

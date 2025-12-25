@@ -1,4 +1,4 @@
-# 🧪 Spring Boot Test API - PT 03
+# Spring Boot Test API - API03
 
 1) Nesta API a ideia é receber o nome do usuário através da URL e imprimir na tela o conteúdo recebido em formato JSON.
 
@@ -59,12 +59,37 @@
 
     ![Browser mostrando a resposta da API Spring Boot em localhost:8080/api/hello/João com saída JSON contendo o campo name definido como João e o campo 'message' exibindo 'Hello, João! I am your third API built using Spring Boot!'](imagem1.jpg)
 
-6) Repare nas alterações em relação à segunda API que fizemos e tente entender as diferenças:
+6) O que aprendemos neste exercício:
 
-    - @RequestMapping("api") : define um prefixo de rota para todos os endpoints da classe. É da família das anotações do Spring MVC que mapeiam URLs. Deste modo, nosso ponto de acesso vai se iniciar em http://localhost:8080/api/ (ao inves de http://localhost:8080/).
+    **i) Entendendo tipos de retorno e nomes de métodos**
+    ```java
+    public Greeting hello(@PathVariable String name) {
+    //     ↑         ↑
+    //   TIPO      NOME DO MÉTODO
+        return new Greeting(...);
+    }
+    ```
+    - **Nome do método**: `hello` (verbo, ação)
+    - **Tipo de retorno**: `Greeting` (substantivo, tipo do record)
+    - O método `hello` **retorna** um objeto do tipo `Greeting`
+    - Spring converte automaticamente o record em JSON
 
-    - public record Greeting(String name, String message) {} : nesta versão da API vamos retornar um JSON. Então, vamos criar um record para auxiliar nesta etapa.
+    **ii) @RequestMapping("api")**
+    - Define um **prefixo de rota** para todos os endpoints da classe
+    - Agrupa endpoints relacionados sob um caminho comum
+    - URL muda de `http://localhost:8080/hello/João` para `http://localhost:8080/api/hello/João`
+    - Boa prática para organizar APIs REST
 
-    - Após criado o record Greeting, vamos retornar este objeto -> que aparecerá como um JSON para o usuário. 
+    **iii) public record Greeting(String name, String message) {}**
+    - **Record** é uma classe especial do Java (desde Java 14)
+    - Forma compacta de criar objetos imutáveis
+    - Substitui classes com getters, equals, hashCode e toString automáticos
+    - Perfeito para representar dados (DTOs)
+
+    **iv) Retorno de objetos como JSON**
+    - Método agora retorna `Greeting` (não mais `String`)
+    - Spring Boot automaticamente converte o objeto em JSON
+    - Jackson (biblioteca) faz a serialização
+    - Resultado: `{"name":"João","message":"Hello, João!..."}` 
 
 7) Feche o servidor em execução e vá para o exercício 04.
