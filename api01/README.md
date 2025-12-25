@@ -28,7 +28,7 @@ Aprender os conceitos básicos de **Spring Boot**:
 1. **Clone este repositório:**
    ```bash
    git clone https://github.com/marcoscesteves/api-tests.git
-   cd api-tests
+   cd api_tests/api01
    ```
 
 2. **Execute o servidor:**
@@ -36,7 +36,17 @@ Aprender os conceitos básicos de **Spring Boot**:
    mvn spring-boot:run
    ```
 
+   O log abaixo avisará que a aplicação está disponível.  
+   ![Saída do console da aplicação Spring Boot mostrando a inicialização bem-sucedida do servidor Tomcat na porta 8080 com logs de inicialização](imagem1.jpg)
+
+
 3. **Abra a aplicação no navegador:**
    ```
    http://localhost:8080/hello
    ```
+
+   Uma mensagem de confirmação será exibida confirmando que a API está funcional.  
+   ![Janela do navegador exibindo localhost:8080/hello com a mensagem "Hello! I am your first API built using Spring Boot!" mostrada em texto preto sobre fundo branco](imagem2.jpg)
+
+4. ** Interrompa o serviço: **
+   Interrompa a execução do servidor e vá para o execício 02 (api_tests/api02)
